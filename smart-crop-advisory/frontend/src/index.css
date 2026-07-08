@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling and font setup */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-gray-50 text-gray-800 transition-colors duration-300;
+}
+
+/* Dark mode background/text colors */
+.dark body {
+  @apply bg-gray-900 text-gray-100;
+}
+
+/* Reusable custom classes to keep component code clean */
+@layer components {
+  /* Main green/earthy gradient background used on landing page sections */
+  .gradient-hero {
+    @apply bg-gradient-to-br from-primary-700 via-primary-600 to-earth-500;
+  }
+
+  /* Standard card style used throughout dashboard */
+  .app-card {
+    @apply bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100 dark:border-gray-700;
+  }
+
+  /* Primary button style */
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium px-5 py-2.5 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Secondary/outline button style */
+  .btn-secondary {
+    @apply border-2 border-primary-600 text-primary-700 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-gray-700 font-medium px-5 py-2.5 rounded-xl transition-all duration-200;
+  }
+
+  /* Standard input style */
+  .input-field {
+    @apply w-full px-4 py-2.5 rounded-xl border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all duration-200;
+  }
+}
