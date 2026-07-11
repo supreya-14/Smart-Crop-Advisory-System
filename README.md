@@ -52,6 +52,7 @@ git clone https://github.com/supreya-14/Smart-Crop-Advisory-System.git
 ### Backend
 
 ```bash
+cd smart-crop-advisory
 cd backend
 npm install
 npm start
@@ -60,6 +61,7 @@ npm start
 ### Frontend
 
 ```bash
+cd smart-crop-advisory
 cd frontend
 npm install
 npm run dev
